@@ -11,17 +11,7 @@ export const initialFeaturesState = {
 
 export const featuresReducer = (state = initialFeaturesState, action) => {
     switch(action.type) {
-        case REMOVE_FEATURE:
-            return {
-                ...state,
-                additionalFeatures: state.additionalFeatures.filter((item) => {
-                    if(item.id === action.payload.id){
-                    return !item
-                    } else {
-                        return item
-                    }
-                })
-            }
+        
         default:
             return state
     }
