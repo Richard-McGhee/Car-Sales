@@ -3,8 +3,9 @@ import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
-import { removeFeature } from './actions/baseCarActions'
-import { addFeature } from './actions/carFeaturesActions'
+import { connect } from 'react-redux'
+import { addFeature } from './actions/baseCarActions'
+import { removeFeature } from './actions/carFeaturesActions'
 
 const App = (props) => {
   // const state = {
