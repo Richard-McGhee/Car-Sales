@@ -1,3 +1,5 @@
+import { ADD_FEATURE } from '../actions/carFeaturesActions'
+
 export const initialFeaturesState = {
     additionalFeatures: [
         { id: 1, name: 'V-6 engine', price: 1500 },
@@ -9,6 +11,8 @@ export const initialFeaturesState = {
 
 export const featuresReducer = (state = initialFeaturesState, action) => {
     switch(action.type) {
+        case ADD_FEATURE:
+            return state
         default:
             return state
     }
