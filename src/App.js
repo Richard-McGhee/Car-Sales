@@ -44,4 +44,4 @@ const mapStateToProps = (state) => {
     additionalFeatures: state.featuresReducer.additionalFeatures
   }
 }
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {})(App);
