@@ -15,13 +15,18 @@ export const initialCarState = {
 export const carReducer = (state = initialCarState, action) => {
     switch(action.type) {
       case ADD_FEATURE:
-        return {
-          ...state,
-          additionalPrice: state.additionalPrice + action.payload.price,
-          car: {
-            ...state.car,
-            features: [...state.car.features, action.payload]
+        let contains = state.car.features.includes(action.payload)
+        if(contains === false){
+          return {
+            ...state,
+            additionalPrice: state.additionalPrice + action.payload.price,
+            car: {
+              ...state.car,
+              features: [...state.car.features, action.payload]
+            }
           }
+        } else {
+          return state
         }
       case REMOVE_FEATURE:
           return {
